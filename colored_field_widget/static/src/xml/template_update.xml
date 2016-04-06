@@ -1,0 +1,18 @@
+<templates>
+    <t t-extend="ListView.row">
+        <t t-jquery="t[t-as='column'] t[t-set='modifiers']" t-operation="after">
+            <t t-if="column.widget == 'colored' || column.widget == 'bool_colored'">
+                <t t-set="additional_style" t-value="column.get_style(record.attributes)"/>
+                <t t-set="column_title" t-value="column.get_title(record.attributes)"/>
+            </t>
+            <t t-if="column.widget != 'colored' &amp;&amp; column.widget != 'bool_colored'">
+                <t t-set="additional_style" t-value="''"/>
+                <t t-set="column_title" t-value="column.help"/>
+            </t>
+        </t>
+        <t t-jquery="t[t-as='column'] td">
+            this.attr('t-att-style', "additional_style");
+            this.attr('t-att-title', "column_title");
+        </t>
+    </t>
+</templates>
