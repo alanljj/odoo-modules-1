@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="hr_contract_form_update" model="ir.ui.view">
+            <field name="name">hr.contract.view.form</field>
+            <field name="model">hr.contract</field>
+            <field name="inherit_id" ref="hr_contract.hr_contract_view_form"/>
+            <field name="arch" type="xml">
+                <data>
+                    <xpath expr="//field[@name='job_id']" position="after">
+                        <field name="mark_color"/>
+                    </xpath>
+                </data>
+            </field>
+        </record>
+
+        <record id="hr_contract_list_update" model="ir.ui.view">
+            <field name="name">hr.contract.view.tree</field>
+            <field name="model">hr.contract</field>
+            <field name="inherit_id" ref="hr_contract.hr_contract_view_tree"/>
+            <field name="arch" type="xml">
+                <data>
+                    <xpath expr="//field[@name='name']" position="replace">
+                        <field name="name" widget="colored" check="mark_color" title="Marked!"/>
+                        <field name="mark_color" invisible="1"/>
+                    </xpath>
+                </data>
+            </field>
+        </record>
+    </data>
+</openerp>

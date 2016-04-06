@@ -1,6 +1,7 @@
 odoo.define('colored_field_widget.list_widgets', function (require) {
     "use strict";
     var core = require('web.core');
+    var formats = require('web.formats');
 
     var ColoredField = core.list_widget_registry.get('field').extend({
         get_style: function (row_data) {
@@ -27,10 +28,12 @@ odoo.define('colored_field_widget.list_widgets', function (require) {
          * For details: addons/web/static/src/js/formats.js:156
          */
         _format: function (row_data, options) {
-            return _.escape(instance.web.format_value(
+            return _.escape(formats.format_value(
                 row_data[this.id].value, {type: this.type}, options.value_if_empty));
         }
     });
+
+    console.log(ColoredField);
 
     var ColoredBooleanField = ColoredField.extend({
 
