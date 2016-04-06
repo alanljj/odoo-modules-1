@@ -3,7 +3,7 @@
     <data>
     	<template id="assets_backend" name="statistic_assets" inherit_id="web.assets_backend">
             <xpath expr="." position="inside">
-                <script type="text/javascript" src="/colored_field_widget/static/src/js/colored_list_widget.js"/>
+                <script type="text/javascript" src="/colored_field_widget/static/src/js/list_widgets.js"/>
             </xpath>
         </template>
     </data>

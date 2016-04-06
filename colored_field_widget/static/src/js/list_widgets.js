@@ -1,5 +1,8 @@
-openerp.colored_field_widget = function (instance, local) {
-    local.ColoredField = instance.web.list.Column.extend({
+odoo.define('colored_field_widget.list_widgets', function (require) {
+    "use strict";
+    var core = require('web.core');
+
+    var ColoredField = core.list_widget_registry.get('field').extend({
         get_style: function (row_data) {
             var check_value = row_data[this.check];
             var color = this.color ? this.color : 'red';
@@ -29,24 +32,7 @@ openerp.colored_field_widget = function (instance, local) {
         }
     });
 
-    local.ColoredBooleanField = instance.web.list.Boolean.extend({
-        get_style: function (row_data) {
-            var check_value = row_data[this.check];
-            var color = this.color ? this.color : 'red';
-            if (check_value && check_value.value != false) {
-                return 'color: ' + color + ';' + (this.other_style || '');
-            }
-            return this.other_style || '';
-        },
-        /* alternative title*/
-        get_title: function (row_data) {
-            var title_value = row_data[this.hover_title];
-            if (typeof title_value !== "undefined" && title_value) {
-                return title_value;
-            } else {
-                return this.help;
-            }
-        },
+    var ColoredBooleanField = ColoredField.extend({
 
         _format: function (row_data, options) {
             return _.str.sprintf('<input type="checkbox" %s readonly="readonly"/>%s',
@@ -55,6 +41,6 @@ openerp.colored_field_widget = function (instance, local) {
     });
 
 
-    instance.web.list.columns.add('field.colored', 'instance.colored_field_widget.ColoredField');
-    instance.web.list.columns.add('field.bool_colored', 'instance.colored_field_widget.ColoredBooleanField');
-};
+    core.list_widget_registry.add('field.colored', ColoredField);
+    core.list_widget_registry.add('field.bool_colored', ColoredBooleanField);
+});
