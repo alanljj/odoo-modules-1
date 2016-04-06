@@ -1,0 +1,3 @@
+[submodule "colored_field_widget"]
+	path = colored_field_widget
+	url = git@gitlab.kit-xxi.com.ua:odoo/colored_field_widget.git
