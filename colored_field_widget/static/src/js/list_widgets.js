@@ -16,6 +16,9 @@ odoo.define('colored_field_widget.list_widgets', function (require) {
         get_title: function (row_data) {
             var title_value = row_data[this.hover_title];
             if (typeof title_value !== "undefined" && title_value) {
+                if (Array.isArray(title_value)){
+                    return title_value[1];
+                }
                 return title_value;
             } else {
                 return this.help;
