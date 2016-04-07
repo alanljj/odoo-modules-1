@@ -4,6 +4,8 @@
     'version': '0.1',
     'summary': 'Custom widget example',
     'category': 'Tools',
+    'author': 'KIT-XXI',
+    'website': "http://kit-xxi.com.ua/",
     'description':
         """
 OpenERP Custom widgets Example
