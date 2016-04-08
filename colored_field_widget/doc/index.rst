@@ -1,12 +1,12 @@
 Colored field widget
 ====================
 
-Module provide widgets to color some fields in list view.
+Module provides widgets to color some fields in list view.
 
 Colored Widget
 --------------
 
-Widget allow you to mark field with color based on condition.
+Widget allows you to mark field with color based on condition.
 
 To use this widget, you must set some attributes in field definition. Can be used for all fields, that displays
 as text.
@@ -17,8 +17,8 @@ as text.
 
 :check: if this field has value and it's value not False, original field will be colored.
 :hover_title: (optional) define field, witch text will be used for tooltip instead of field help text.
-:color: (optional) define color, that will be used to colored field. Default is `red`.
-:other_style: (optional) define other text, that will be used in style attribute. Default is empty.
+:color: (optional) define color, that will be used to color field. Default value is `red`.
+:other_style: (optional) define other text, that will be used in style attribute. Default value is empty.
 
 Colored Boolean Widget
 ----------------------
@@ -34,5 +34,5 @@ To use this widget, you must set some attributes in field definition. Can be use
 :check: if this field has value and it's value not False, original field will be colored.
 :check_text: text, that will be displayed, when condition is true
 :hover_title: (optional) define field, witch text will be used for tooltip instead of field help text.
-:color: (optional) define color, that will be used to colored field. Default is `red`.
-:other_style: (optional) define other text, that will be used in style attribute. Default is empty.
+:color: (optional) define color, that will be used to color field. Default value is `red`.
+:other_style: (optional) define other text, that will be used in style attribute. Default value is empty.
