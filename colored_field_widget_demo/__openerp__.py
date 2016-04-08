@@ -1,6 +1,6 @@
 #-*- coding:utf-8 -*-
 {
-    'name': 'OpenERP Custom widgets example',
+    'name': 'Custom colored widgets example',
     'version': '0.1',
     'summary': 'Custom widget example',
     'category': 'Tools',
@@ -8,7 +8,7 @@
     'website': "http://kit-xxi.com.ua/",
     'description':
         """
-OpenERP Custom widgets Example
+Custom colored widgets example
 ==============================
 
         """,
