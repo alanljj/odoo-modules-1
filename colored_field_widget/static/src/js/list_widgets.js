@@ -36,8 +36,6 @@ odoo.define('colored_field_widget.list_widgets', function (require) {
         }
     });
 
-    console.log(ColoredField);
-
     var ColoredBooleanField = ColoredField.extend({
 
         _format: function (row_data, options) {
