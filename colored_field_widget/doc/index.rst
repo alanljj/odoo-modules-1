@@ -1,9 +1,7 @@
 Colored field widget
 ====================
 
-Module provide widgets to color some fields in list view
-
-.. toctree::
+Module provide widgets to color some fields in list view.
 
 Colored Widget
 --------------
@@ -20,7 +18,7 @@ as text.
 :check: if this field has value and it's value not False, original field will be colored.
 :hover_title: (optional) define field, witch text will be used for tooltip instead of field help text.
 :color: (optional) define color, that will be used to colored field. Default is `red`.
-:other_style: (optional) define other text, that will be used in style attribute. Default is ``.
+:other_style: (optional) define other text, that will be used in style attribute. Default is empty.
 
 Colored Boolean Widget
 ----------------------
@@ -37,4 +35,4 @@ To use this widget, you must set some attributes in field definition. Can be use
 :check_text: text, that will be displayed, when condition is true
 :hover_title: (optional) define field, witch text will be used for tooltip instead of field help text.
 :color: (optional) define color, that will be used to colored field. Default is `red`.
-:other_style: (optional) define other text, that will be used in style attribute. Default is ``.
+:other_style: (optional) define other text, that will be used in style attribute. Default is empty.
