@@ -29,24 +29,7 @@ openerp.colored_field_widget = function (instance, local) {
         }
     });
 
-    local.ColoredBooleanField = instance.web.list.Boolean.extend({
-        get_style: function (row_data) {
-            var check_value = row_data[this.check];
-            var color = this.color ? this.color : 'red';
-            if (check_value && check_value.value != false) {
-                return 'color: ' + color + ';' + (this.other_style || '');
-            }
-            return this.other_style || '';
-        },
-        /* alternative title*/
-        get_title: function (row_data) {
-            var title_value = row_data[this.hover_title];
-            if (typeof title_value !== "undefined" && title_value) {
-                return title_value;
-            } else {
-                return this.help;
-            }
-        },
+    local.ColoredBooleanField = local.ColoredField.extend({
 
         _format: function (row_data, options) {
             return _.str.sprintf('<input type="checkbox" %s readonly="readonly"/>%s',
