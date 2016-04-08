@@ -1,16 +1,17 @@
 #-*- coding:utf-8 -*-
 {
-    'name': 'OpenERP Custom widgets',
+    'name': 'Custom colored widgets',
     'version': '0.1',
     'summary': 'Some custom widgets',
     'category': 'Tools',
     'description':
         """
-OpenERP Custom widgets
-=================
+Custom colored widgets
+======================
 
 A collection of custom widgets:
 - Colored ListView field
+- Colored ListView boolean field
         """,
     'data': [
         "custom_widget.xml"
