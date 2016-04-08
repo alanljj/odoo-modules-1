@@ -40,5 +40,5 @@ To use this widget, you must set some attributes in field definition. Can be use
 :check: if this field has value and it's value si not False, original field will be colored.
 :check_text: text, that will be displayed, when condition is true
 :hover_title: (optional) define field, which text will be used for tooltip instead of field help text.
-:color: (optional) define color, that will be used to color field. Default value is *:warning:`red`.
+:color: (optional) define color, that will be used to color field. Default value is :warning:`red`.
 :other_style: (optional) define other text, that will be used in style attribute. Default value is empty.
