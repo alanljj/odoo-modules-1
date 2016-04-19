@@ -29,7 +29,8 @@ class GroupResultApplyMixin(models.Model):
     _name = 'read_group_mixin.group_result_apply'
 
     @api.model
-    def process_read_group_result(self, result):
+    def process_read_group_result(self, res, domain, fields, groupby, offset=0, limit=None, context=None, orderby=False, lazy=True,
+                   **kwargs):
         pass
 
     @api.model
@@ -41,7 +42,8 @@ class GroupResultApplyMixin(models.Model):
         """
         res = super(GroupResultApplyMixin, self).read_group(domain, fields, groupby, offset, limit=limit,
                                                  context=context, orderby=orderby, lazy=lazy, **kwargs)
-        res = self.process_read_group_result(res)
+        res = self.process_read_group_result(res, domain, fields, groupby, offset=0, limit=None, context=None, orderby=False, lazy=True,
+                   **kwargs)
         if not res:
             raise Exception('You must override process_read_group_result method to use group_result_apply mixin')
         return res
